@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.div`
-  background: rebeccapurple;
+  background: #524763;
   margin-bottom: 1.45rem;
 `;
 
@@ -27,15 +27,15 @@ const Header = () => (
           Gatsby
         </Link>
       </h1>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
     </HeaderContainer>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-    </ul>
   </HeaderWrapper>
 );
 
