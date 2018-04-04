@@ -45,13 +45,13 @@ const Header = ({ data }) => (
       
     </HeaderContainer>
     <Img
-      sizes={data.caveLightImg.sizes}
+      sizes={data.codingImg.sizes}
       style={{
         position: 'absolute',
         left: 0,
         top: 0,
         width: '100%',
-        height: '125%',
+        height: '100%',
       }}
     />
   </HeaderWrapper>

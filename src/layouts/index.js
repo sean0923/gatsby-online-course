@@ -53,5 +53,10 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
+    codingImg: imageSharp(id: { regex: "/coding.jpg/" }) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
+      }
+    }
   }
 `;
