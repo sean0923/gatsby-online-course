@@ -1,16 +1,16 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-
 const IndexPage = ({ data }) => (
   <div>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <Link to="/page-2/">Go to page 2</Link>
-    <p>{data.site.siteMetadata.title}</p>
-    <p>{data.site.siteMetadata.test}</p>
-    <p>{data.site.siteMetadata.test2}</p>
+    {data.allMarkdownRemark.edges.map(obj => {
+      console.log('obj: ', obj);
+      return <div>test</div>;
+    })}
   </div>
 );
 
@@ -23,6 +23,18 @@ export const query = graphql`
         title
         test
         test2
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MM/DD/YY ddd")
+          }
+          html
+        }
       }
     }
   }
