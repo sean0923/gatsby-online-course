@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Welcome to post ~',
     test: 'testing siteMetaData',
     test2: 'testing siteMetaDataaa',
   },
@@ -21,7 +21,13 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        excerpt_separator: '--- end ---'
+      },
+    },
+    
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
   ],
