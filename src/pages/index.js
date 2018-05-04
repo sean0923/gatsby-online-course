@@ -32,6 +32,7 @@ export const query = graphql`
             date(formatString: "MM/DD/YY ddd")
           }
           html
+          excerpt
         }
       }
     }
