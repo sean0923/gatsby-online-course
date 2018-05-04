@@ -7,9 +7,9 @@ const IndexPage = ({ data }) => (
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <Link to="/page-2/">Go to page 2</Link>
-    {data.allMarkdownRemark.edges.map(obj => {
-      console.log('obj: ', obj);
-      return <div>test</div>;
+    {data.allMarkdownRemark.edges.map(({ node }, idx) => {
+      console.log('node: ', node);
+      return <div key={idx}>test</div>;
     })}
   </div>
 );
